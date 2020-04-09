@@ -1,0 +1,9 @@
+<div class="section-item-wrapper">
+  {% block content %}
+    {{ content.field_image_content }}
+    {% if content.field_event_date %}
+      <h3 class="event-date">{{ content.field_event_date }}</h3>
+    {% endif %}
+  {% endblock %}
+</div>
+

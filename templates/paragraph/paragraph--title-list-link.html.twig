@@ -1,0 +1,17 @@
+
+  <div class="wrapper-wrapper">
+    {% block content %}
+      {% if content.field_event_title %}
+       <h3 class="event-title"> {{ content.field_event_title }}</h3>
+      {% endif %}
+
+      {% if content.field_list_items %}
+        <ul class="event-information-wrapper">  {{ content.field_list_items }}</ul>
+
+      {% endif %}
+      {% if content.field_event_more_link %}
+        {{ content.field_event_more_link }}
+      {% endif %}
+    {% endblock %}
+  </div>
+

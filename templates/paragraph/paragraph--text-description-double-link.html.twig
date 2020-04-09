@@ -1,0 +1,15 @@
+<section class="page-downloading-section"  style="background-image: url('{{ content.field_section_background['#items']|file_url }}')">
+  {% block content %}
+    {% if content.field_main_paragraph_title %}
+      <h2 class="downloading-section-title">{{ content.field_main_paragraph_title }}</h2>
+    {% endif %}
+    {% if content.	field_description_paragraph_text %}
+      <p class="downloading-section-description">{{ content.	field_description_paragraph_text}}</p>
+    {% endif %}
+    {% if content.	field_description_paragraph_text %}
+      <div class="downloading-section-link-div">{{ content.field_paragraph_link_content }}</div>
+    {% endif %}
+
+  {% endblock %}
+</section>
+

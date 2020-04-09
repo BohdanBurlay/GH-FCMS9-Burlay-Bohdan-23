@@ -1,0 +1,392 @@
+.all-members-main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > .all-singers-wrapper-content {
+    margin: 42px 10px;
+
+    &:before {
+      bottom: -4% !important;
+    }
+
+    &:hover {
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+        top: 97%;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 994px) {
+  .all-members-main-wrapper > .all-singers-wrapper-content {
+    & > .views-field-field-singer-name > .field-content {
+      font-size: 15px;
+    }
+
+    &:before {
+      bottom: -4.5% !important;
+    }
+
+    &:hover {
+      &:before {
+        height: 30% !important;
+        bottom: -16% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+        top: 101% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+        top: 103%;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 857px) {
+  .all-members-main-wrapper > .all-singers-wrapper-content {
+    & > .views-field-field-singer-name > .field-content {
+      font-size: 25px;
+    }
+
+    &:before {
+      bottom: -4.5% !important;
+    }
+
+    &:hover {
+      &:before {
+        height: 22% !important;
+        bottom: -4% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+        top: 96% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+        top: 96%;
+        display: block;
+      }
+    }
+  }
+}
+
+.all-singers-wrapper-content {
+  position: relative;
+  cursor: pointer;
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    background-color: red;
+  }
+
+  & > .views-field-field-singer-name {
+    margin-top: -59px;
+    text-align: left;
+  }
+
+  & > .views-field-field-singer-m {
+    text-align: left;
+  }
+
+  &:hover {
+    &:before {
+      height: 22%;
+      bottom: -11%;
+    }
+
+    & > .views-field-field-singer-name {
+      margin-top: -90px;
+    }
+
+    & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+      top: 101%;
+      display: block;
+    }
+
+    & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+      top: 97% !important;
+    }
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 994px) {
+  .all-singers-wrapper-content, {
+    & > .views-field-field-singer-name > .field-content {
+      font-size: 15px;
+    }
+
+    &:hover {
+      &:before {
+        height: 27%;
+        bottom: -14.5% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+        top: 101% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+        top: 103%;
+        display: block;
+      }
+    }
+  }
+}
+
+.block--views-block--all-singer-view-block-1 > div > .contextual-region > header {
+  @include titleOtherStyles;
+  font-size: 50px;
+  margin: 60px 0 -10px 0;
+  text-align: center;
+}
+
+.singers-page-class {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 0 auto;
+  @media screen and(max-width: 1340px) {
+    justify-content: space-around;
+  }
+}
+
+.drum-singers-class > button {
+  top: 3.5%;
+  right: 0;
+  @media screen and(min-width: 320px) and(max-width: 500px) {
+    top: -2.5%;
+  }
+}
+
+.drum-singers-class, .guiter-singers-class, .vocal-singers-class > header {
+  @include titleOtherStyles;
+  font-size: 35px;
+  text-align: center;
+  margin: -44px 0 -23px 0;
+  @media screen and(min-width: 320px) and(max-width: 500px) {
+    font-size: 23px;
+    margin-top: -10px;
+  }
+}
+
+.left-drum-singers-arrow {
+  left: 0;
+  background-image: url("/themes/custom/mytheme/src/img/left-arrow.png");
+}
+
+.right-drum-singers-arrow {
+  right: 2.5%;
+  background-image: url("/themes/custom/mytheme/src/img/right-arrow.png");
+}
+
+.block--views-block--drum-singers-block-1, .block--views-block--vocal-singers-block-1, .block--views-block--guiter-singers-block-1 {
+  max-height: 600px;
+  margin: 50px 0 0 0;
+  @media screen and(min-width: 320px) and(max-width: 800px) {
+    margin-top: 100px;
+
+  }
+}
+
+.slider-drum-class {
+  &:hover {
+    &:before {
+      bottom: -11%;
+    }
+
+    & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon, {
+      top: 101%;
+    }
+  }
+}
+
+.vocal-singers-class {
+  & > button {
+    top: 3%;
+    right: 0;
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 500px) {
+
+  .vocal-singers-class {
+    & > button {
+      top: -3.6%;
+      right: 0;
+    }
+  }
+}
+
+.left-vocal-singers-arrow {
+  left: 0;
+  background-image: url("/themes/custom/mytheme/src/img/left-arrow.png");
+}
+
+.right-vocal-singers-arrow {
+  background-image: url("/themes/custom/mytheme/src/img/right-arrow.png");
+}
+
+.custom-vocal-class {
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    background-color: red;
+  }
+
+  & > .views-field-field-singer-name {
+    margin-top: -59px;
+  }
+
+  &:hover {
+    &:before {
+      height: 22%;
+      bottom: -11%;
+    }
+
+    & > .views-field-field-singer-name {
+      margin-top: -90px;
+    }
+
+    & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+      top: 101%;
+      display: block;
+    }
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 994px) {
+  .custom-vocal-class, {
+    & > .views-field-field-singer-name > .field-content {
+      font-size: 15px;
+    }
+
+    &:before {
+      bottom: -4.5% !important;
+    }
+
+    &:hover {
+      &:before {
+        height: 27% !important;
+        bottom: -14.5% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+        top: 101% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+        top: 103%;
+        display: block;
+      }
+    }
+  }
+}
+
+.guiter-singers-class > button {
+  top: 3.5%;
+  right: 0;
+  @media screen and(min-width: 320px) and(max-width: 500px) {
+    top: -2.5%;
+  }
+}
+
+.left-guiter-singers-arrow {
+  left: 0;
+  background-image: url("/themes/custom/mytheme/src/img/left-arrow.png");
+}
+
+.right-guiter-singers-arrow {
+  background-image: url("/themes/custom/mytheme/src/img/right-arrow.png");
+}
+
+.custom-guiter-class {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    background-color: red;
+  }
+
+  & > .views-field-field-singer-name {
+    margin-top: -59px;
+    text-align: left;
+  }
+
+  & > .views-field-field-singer-m {
+    text-align: left;
+  }
+
+  &:hover {
+    &:before {
+      height: 22%;
+      bottom: -11%;
+    }
+
+    & > .views-field-field-singer-name {
+      margin-top: -90px;
+    }
+
+    & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+      top: 101%;
+      display: block;
+    }
+
+    & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+      top: 97% !important;
+    }
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 994px) {
+  .custom-guiter-class, {
+    & > .views-field-field-singer-name > .field-content {
+      font-size: 15px;
+    }
+
+    &:before {
+      bottom: -4.5% !important;
+    }
+
+    &:hover {
+      &:before {
+        height: 27% !important;
+        bottom: -14.5% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-twitter-icon, .views-field-field-section-google-icon {
+        top: 101% !important;
+      }
+
+      & > .views-field-field-section-facebook-icon, .views-field-field-section-facebook-followers, .views-field-field-section-twitter-icon, .views-field-field-section-twitter-followers, .views-field-field-section-google-icon, .views-field-field-section-google-followers {
+        top: 103%;
+        display: block;
+      }
+    }
+  }
+}

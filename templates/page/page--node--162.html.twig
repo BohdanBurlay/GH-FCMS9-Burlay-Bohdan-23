@@ -1,0 +1,160 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page">
+  {% embed '@radix/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
+
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        <div class="mr-auto">
+          {{ page.navbar_left }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  <main class="pt-5 pb-5">
+    {% if page.header %}
+      <header class="page__header mb-3">
+        <div class="container-fluid header-wrapper">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+
+    {% if page.content %}
+      <div class="page__content">
+        <div class="container-fluid singers-page-class page-content-wrapper">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container">
+        <div class="d-flex flex-column justify-content-md-between align-items-md-center footer-content-container">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+</div>
+
+<script>
+  let drumSingersArr=Array.from(document.querySelectorAll('.slider-drum-class'))
+  let leftDrumArrow=document.querySelector('.left-drum-singers-arrow')
+  let rightDrumArrow=document.querySelector('.right-drum-singers-arrow')
+  let currentDrumSlide=Math.floor(drumSingersArr.length/2)
+
+  function hideSlides(arr) {
+    for (let i=0;i<arr.length;i++){
+      arr[i].style.display='none'
+    }
+  }
+  hideSlides(drumSingersArr)
+  function showSlides(arr,currentSlide) {
+    for (let i=0;i<arr.length;i++){
+      arr[currentSlide].style.display='block'
+    }
+  }
+  showSlides(drumSingersArr,currentDrumSlide)
+  leftDrumArrow.addEventListener('click',()=>{
+    if(currentDrumSlide==0){
+      return false
+    }else {
+      currentDrumSlide-=1
+      hideSlides(drumSingersArr)
+      showSlides(drumSingersArr,currentDrumSlide)
+    }
+  })
+  rightDrumArrow.addEventListener('click',()=>{
+    if(currentDrumSlide==drumSingersArr.length-1){
+      return false
+    }else {
+      currentDrumSlide+=1
+      hideSlides(drumSingersArr)
+      showSlides(drumSingersArr,currentDrumSlide)
+    }
+  })
+
+  let vocalSingerArr=Array.from(document.querySelectorAll('.custom-vocal-class'))
+  let leftVocalArrow=document.querySelector('.left-vocal-singers-arrow')
+  let rightVocalArrow=document.querySelector('.right-vocal-singers-arrow')
+  let currentVocalSlide=Math.floor(vocalSingerArr.length/2)
+  hideSlides(vocalSingerArr)
+  showSlides(vocalSingerArr,currentVocalSlide)
+
+  leftVocalArrow.addEventListener('click',()=>{
+    if(currentVocalSlide==0){
+      return false
+    }else {
+      currentVocalSlide-=1
+      hideSlides(vocalSingerArr)
+      showSlides(vocalSingerArr,currentVocalSlide)
+    }
+  })
+
+  rightVocalArrow.addEventListener('click',()=>{
+    if(currentVocalSlide==vocalSingerArr.length-1){
+      return false
+    }else {
+      currentVocalSlide+=1
+      hideSlides(vocalSingerArr)
+      showSlides(vocalSingerArr,currentVocalSlide)
+    }
+  })
+
+
+
+
+
+
+  let guiterSingerArr=Array.from(document.querySelectorAll('.custom-guiter-class'))
+  let leftGuiterArrow=document.querySelector('.left-guiter-singers-arrow')
+  let rightGuiterArrow=document.querySelector('.right-guiter-singers-arrow')
+  let currentGuiterSlide=Math.floor(guiterSingerArr.length/2)
+  hideSlides(guiterSingerArr)
+  showSlides(guiterSingerArr,currentGuiterSlide)
+
+  leftGuiterArrow.addEventListener('click',()=>{
+    if(currentGuiterSlide==0){
+      return false
+    }else {
+      currentGuiterSlide-=1
+      hideSlides(guiterSingerArr)
+      showSlides(guiterSingerArr,currentGuiterSlide)
+    }
+  })
+
+  rightGuiterArrow.addEventListener('click',()=>{
+    if(currentGuiterSlide==guiterSingerArr.length-1){
+      return false
+    }else {
+      currentGuiterSlide+=1
+      hideSlides(guiterSingerArr)
+      showSlides(guiterSingerArr,currentGuiterSlide)
+    }
+  })
+</script>

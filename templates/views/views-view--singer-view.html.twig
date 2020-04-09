@@ -1,0 +1,34 @@
+
+<section class="singer-view">
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+  {{ exposed }}
+  {{ attachment_before }}
+  <button class="slider-arrow left-arrow"></button>
+  <button class="slider-arrow right-arrow"></button>
+  <div class="singer-wrapper">
+  {% if rows -%}
+    <div class="singers-container"> {{ rows }}</div>
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  {{ pager }}
+  </div>
+  {{ attachment_after }}
+  {{ more }}
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}
+</section>

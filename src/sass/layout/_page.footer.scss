@@ -1,0 +1,30 @@
+// Page: Footer
+// -----------------------------------------------------------------------------
+.footer-content-container {
+  display: flex;
+  justify-content: center;
+
+  & > .block--mainnavigation {
+    margin: 0 auto;
+
+    & > ul {
+      & > li > a {
+        color: black;
+      }
+    }
+  }
+}
+
+.main-footer-text {
+  font-family: $Roboto;
+  font-size: 13px;
+  letter-spacing: 0.65px;
+}
+
+.unique-footer-text {
+  color: #df001f;
+  font-family: $GreatVibes;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}

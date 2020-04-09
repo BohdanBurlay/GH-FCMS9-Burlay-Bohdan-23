@@ -1,0 +1,15 @@
+<section class="founder-section"
+         style="background-image: url('{{ content.field_section_background['#items']|file_url }}')">
+  {% block content %}
+    {% if content.field_section_title_words %}
+      <h2 class="section-wrapper-title">{{ content.field_section_title_words }}</h2>
+    {% endif %}
+    {% if content.field_content_text %}
+      {{ content.field_content_text }}
+    {% endif %}
+    {% if content.field_section_main_link %}
+    {{ content.field_section_main_link }}
+    {% endif %}
+  {% endblock %}
+</section>
+
